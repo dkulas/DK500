@@ -81,3 +81,11 @@ span#unicodeChart {
   color: #FFD700;
   font-weight: normal;
 }
+
+div#noscript {
+  font-size: 1.25em;
+  color: #fff;
+  background-color: maroon;
+  padding: 5px;
+  text-align: center;
+}
