@@ -89,3 +89,37 @@ div#noscript {
   padding: 5px;
   text-align: center;
 }
+
+main {
+  margin: 5%;
+}
+
+.hoverColorTransition {
+  transition: color 0.4s ease;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+}
+
+footer p {
+  padding: 0 0 5px 0;
+}
+
+footer p strong {
+  font-weight: bold;
+}
+
+footer p strong a {
+  color: black;
+  text-decoration: none;
+}
+
+footer p strong a:hover {
+  cursor: pointer;
+  color: #006C23;
+}
