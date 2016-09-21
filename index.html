@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>D&amp;K 500</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="This is a simple website that displays stock information using the Quandl API">
+	<meta name="viewport" content="initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="public/styles.css">
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/Chart.bundle.js"></script>
+</head>
+<body>
+
+<!-- [if IE]>
+	alert("Shame on you for using Internet Explorer!  Do you still get your milk home-delivered or pay a nickle for a movie ticket?  Didn't think so.  Try FireFox or Chrome for a better experience.  Thank you!");
+<![endif]-->
+
+<noscript>
+	<div id="noscript" class="centerText">
+		<strong>D&amp;K 500</strong> requires JavaSript in order to work
+	</div>
+</noscript>
+
+<h1 id="title">D&amp;K 500</h1>
+
+<main>
+	<h2></h2>
+	<section>
+		<form id="getStock" class="centerText" method="get">
+			<input required type="text" name="stocksymbol" id="stockSym" placeholder="ex: AAPL" class="" autofocus="true" autocomplete="off">
+			<input type="button" form="getStock" value="Go" id="submitBtn" class="">
+		</form>
+	</section>
+	<section>
+		
+	</section>
+</main>
+
+<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
