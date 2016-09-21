@@ -35,7 +35,7 @@ jQuery(document).ready(function($) {
 				var data = parsed_json["dataset"]["data"];
 
 				for (var i in data) {
-					console.log(data[i]);
+					console.log(data[i][0] + ": " + data[i][1]);
 				}
 
 			},
