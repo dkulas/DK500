@@ -24,12 +24,19 @@ jQuery(document).ready(function($) {
 			success: function(parsed_json) {
 
 				console.log(parsed_json);
+
 				var datasetCode = parsed_json["dataset"]["dataset_code"];
 				var dataAccessDate = parsed_json["dataset"]["data"][0][0];
 				var stockOpen = parsed_json["dataset"]["data"][0][1];
 				var stockHigh = parsed_json["dataset"]["data"][0][2];
 				var stockLow = parsed_json["dataset"]["data"][0][3];
 				var stockClose = parsed_json["dataset"]["data"][0][4];
+
+				var data = parsed_json["dataset"]["data"];
+
+				for (var i in data) {
+					console.log(data[i]);
+				}
 
 			},
 
