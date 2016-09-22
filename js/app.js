@@ -32,15 +32,21 @@ jQuery(document).ready(function($) {
 				var stockHigh = parsed_json["dataset"]["data"][0][2];
 				var stockLow = parsed_json["dataset"]["data"][0][3];
 				var stockClose = parsed_json["dataset"]["data"][0][4];
+				var stockCloseTotal = 0;
+				var stockCloseAverage = 0;
 
-				var total = 0;
-
+				// For-Loop to gather and sum all Stock Close values
 				for (var i = 0; i < data.length; i++) {
-					total += data[i][4];
+
+					stockCloseTotal += data[i][4];
+					stockCloseAverage = stockCloseTotal / data.length; 
+
 				}
 
-				console.log("TOTAL: " + total);
+				console.log("Stock Close Total: " + stockCloseTotal);
+				console.log("Stock Close Average: " + stockCloseAverage);
 
+				// For-In Loop to gather and store Stock Close Date and Stock Close Value to be used in Chart JS
 				// for (var i in data) {
 				// 	console.log(data[i][0] + ": " + data[i][4]);
 				// }
