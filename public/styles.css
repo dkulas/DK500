@@ -94,6 +94,10 @@ main {
   margin: 5%;
 }
 
+h2#errorHandling {
+  display: none;
+}
+
 .hoverColorTransition {
   transition: color 0.4s ease;
 }

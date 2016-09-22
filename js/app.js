@@ -12,8 +12,8 @@ jQuery(document).ready(function($) {
 
 			error: function(jqXHR, textStatus, errorThrown) {
 
-				$("").append("Error: " + jqXHR.responseText);
-				$("").css({
+				$("h2#errorHandling").append("Error: " + jqXHR.responseText);
+				$("h2#errorHandling").css({
 					"display": "block"
 				});
 
@@ -27,11 +27,18 @@ jQuery(document).ready(function($) {
 
 				var data = parsed_json["dataset"]["data"];
 				var stockCode = parsed_json["dataset"]["dataset_code"];
-				var stockCloseDate = parsed_json["dataset"]["data"][0][0];
-				var stockOpen = parsed_json["dataset"]["data"][0][1];
-				var stockHigh = parsed_json["dataset"]["data"][0][2];
-				var stockLow = parsed_json["dataset"]["data"][0][3];
-				var stockClose = parsed_json["dataset"]["data"][0][4];
+				var stockCloseDate = data[0][0];
+				var stockOpen = data[0][1];
+				var stockHigh = data[0][2];
+				var stockLow = data[0][3];
+				var stockClose = data[0][4];
+				console.log("Stock Close Date: " + stockCloseDate);
+				console.log("Stock Open Value: " + stockOpen);
+				console.log("Stock High Value: " + stockHigh);
+				console.log("Stock Low Value: " + stockLow);
+				console.log("Stock Close Value: " + stockClose);
+
+
 				var stockCloseTotal = 0;
 				var stockCloseAverage = 0;
 
