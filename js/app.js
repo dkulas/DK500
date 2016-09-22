@@ -7,7 +7,7 @@ jQuery(document).ready(function($) {
 
 		$.ajax({
 
-			url: "https://www.quandl.com/api/v3/datasets/WIKI/"+ stockSymbol + ".json?api_key=6QRi2WE7PV6yrG1j56pP",
+			url: "https://www.quandl.com/api/v3/datasets/WIKI/" + stockSymbol + ".json?api_key=6QRi2WE7PV6yrG1j56pP",
 			dataType: "json",
 
 			error: function(jqXHR, textStatus, errorThrown) {
@@ -25,13 +25,13 @@ jQuery(document).ready(function($) {
 
 				console.log(parsed_json);
 
-				var data = parsed_json["dataset"]["data"];
+				var stockData = parsed_json["dataset"]["data"];
 				var stockCode = parsed_json["dataset"]["dataset_code"];
-				var stockCloseDate = data[0][0];
-				var stockOpen = data[0][1];
-				var stockHigh = data[0][2];
-				var stockLow = data[0][3];
-				var stockClose = data[0][4];
+				var stockCloseDate = stockData[0][0];
+				var stockOpen = stockData[0][1];
+				var stockHigh = stockData[0][2];
+				var stockLow = stockData[0][3];
+				var stockClose = stockData[0][4];
 				console.log("Stock Close Date: " + stockCloseDate);
 				console.log("Stock Open Value: " + stockOpen);
 				console.log("Stock High Value: " + stockHigh);
@@ -39,14 +39,14 @@ jQuery(document).ready(function($) {
 				console.log("Stock Close Value: " + stockClose);
 
 
+				// For-Loop to gather and sum all Stock Close values
 				var stockCloseTotal = 0;
 				var stockCloseAverage = 0;
 
-				// For-Loop to gather and sum all Stock Close values
-				for (var i = 0; i < data.length; i++) {
+				for (var i = 0; i < stockData.length; i++) {
 
-					stockCloseTotal += data[i][4];
-					stockCloseAverage = stockCloseTotal / data.length; 
+					stockCloseTotal += stockData[i][4];
+					stockCloseAverage = stockCloseTotal / stockData.length; 
 
 				}
 
@@ -54,8 +54,8 @@ jQuery(document).ready(function($) {
 				console.log("Stock Close Average: " + stockCloseAverage);
 
 				// For-In Loop to gather and store Stock Close Date and Stock Close Value to be used in Chart JS
-				// for (var i in data) {
-				// 	console.log(data[i][0] + ": " + data[i][4]);
+				// for (var i in stockData) {
+				// 	console.log(stockData[i][0] + ": " + stockData[i][4]);
 				// }
 
 			},
