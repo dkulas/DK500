@@ -25,18 +25,25 @@ jQuery(document).ready(function($) {
 
 				console.log(parsed_json);
 
-				var datasetCode = parsed_json["dataset"]["dataset_code"];
-				var dataAccessDate = parsed_json["dataset"]["data"][0][0];
+				var data = parsed_json["dataset"]["data"];
+				var stockCode = parsed_json["dataset"]["dataset_code"];
+				var stockCloseDate = parsed_json["dataset"]["data"][0][0];
 				var stockOpen = parsed_json["dataset"]["data"][0][1];
 				var stockHigh = parsed_json["dataset"]["data"][0][2];
 				var stockLow = parsed_json["dataset"]["data"][0][3];
 				var stockClose = parsed_json["dataset"]["data"][0][4];
 
-				var data = parsed_json["dataset"]["data"];
+				var total = 0;
 
-				for (var i in data) {
-					console.log(data[i][0] + ": " + data[i][4]);
+				for (var i = 0; i < data.length; i++) {
+					total += data[i][4];
 				}
+
+				console.log("TOTAL: " + total);
+
+				// for (var i in data) {
+				// 	console.log(data[i][0] + ": " + data[i][4]);
+				// }
 
 			},
 
