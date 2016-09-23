@@ -27,6 +27,7 @@ jQuery(document).ready(function($) {
 
 				var stockData = parsed_json["dataset"]["data"];
 				var stockCode = parsed_json["dataset"]["dataset_code"];
+				var stockIPODate = parsed_json["dataset"]["start_date"];
 				var stockCloseDate = stockData[0][0];
 				var stockOpen = stockData[0][1];
 				var stockHigh = stockData[0][2];
@@ -37,6 +38,7 @@ jQuery(document).ready(function($) {
 				console.log("Stock High Value: " + stockHigh);
 				console.log("Stock Low Value: " + stockLow);
 				console.log("Stock Close Value: " + stockClose);
+				console.log("Stock IPO Date: " + stockIPODate);
 
 
 				// For-Loop to gather and sum all Stock Close values
@@ -50,7 +52,6 @@ jQuery(document).ready(function($) {
 
 				}
 
-				console.log("Stock Close Total: " + stockCloseTotal);
 				console.log("Stock Close Average: " + stockCloseAverage);
 
 				// For-In Loop to gather and store Stock Close Date and Stock Close Value to be used in Chart JS
