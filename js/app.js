@@ -38,6 +38,9 @@ jQuery(document).ready(function($) {
 				console.log("Stock Low Value: " + stockLow);
 				console.log("Stock Close Value: " + stockClose);
 
+				// initialize the graph/chart
+				var context = document.getElementById("stockGraph").getContext("2d");
+				var stockChart = new Chart(context).Line(data);
 
 				// For-Loop to gather and sum all Stock Close values
 				var stockCloseTotal = 0;
