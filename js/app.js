@@ -41,8 +41,8 @@ jQuery(document).ready(function($) {
 				console.log("Stock IPO Date: " + stockIPODate);
 
 				// initialize the graph/chart
-				var context = document.getElementById("stockGraph").getContext("2d");
-				var stockChart = new Chart(context).Line(data);
+				// var context = document.getElementById("stockGraph").getContext("2d");
+				// var stockChart = new Chart(context).Line(data);
 
 				// For-Loop to gather and sum all Stock Close values
 				var stockCloseTotal = 0;
@@ -58,9 +58,9 @@ jQuery(document).ready(function($) {
 				console.log("Stock Close Average: " + stockCloseAverage);
 
 				// For-In Loop to gather and store Stock Close Date and Stock Close Value to be used in Chart JS
-				// for (var i in stockData) {
-				// 	console.log(stockData[i][0] + ": " + stockData[i][4]);
-				// }
+				for (var i in stockData) {
+					console.log(stockData[i][0] + ": " + stockData[i][4]);
+				}
 
 			},
 
@@ -72,7 +72,7 @@ jQuery(document).ready(function($) {
 		});
 	}
 
-	$("input#submitBtn").keypress(function(event) {
+	$("input#stockSym").keypress(function(event) {
 		if (event.keyCode == 13 || event.which == 13) {
 			$("input#submitBtn").focus();
 			event.preventDefault();
