@@ -57,13 +57,19 @@ jQuery(document).ready(function($) {
 
 				console.log("Stock Close Average: " + stockCloseAverage);
 
-				// For-In Loop to gather and store Stock Close Date and Stock Close Value to be used in Chart JS
+				/*
+					For...in loop that will iterate over
+					the entire set of data and extract
+					the stock close date along with its 
+					associated stock close price and then
+					push those values into their
+					respective arrays (detailed below)
+				*/
 				var datesArray = [];
 				var pricesArray = [];
 
 				for (var i in stockData) {
 
-					// console.log(stockData[i][0] + ": " + stockData[i][4]);
 					datesArray.push(stockData[i][0]);
 					pricesArray.push(stockData[i][4]);
 
