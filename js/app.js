@@ -42,7 +42,22 @@ jQuery(document).ready(function($) {
 
 				// initialize the graph/chart
 				// var context = document.getElementById("stockGraph").getContext("2d");
-				// var stockChart = new Chart(context).Line(data);
+				/* var stockChart = new Chart(context, {
+						type: 'line',
+						data: {
+							labels: [],
+							datasets: [{
+								label: '',
+								data: [],
+								backgroundColor: "",
+							}, {
+								label: '',
+								data: [],
+								backgroundColor: ""
+							}]
+						}
+				});
+				*/
 
 				// For-Loop to gather and sum all Stock Close values
 				var stockCloseTotal = 0;
