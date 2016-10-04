@@ -2,6 +2,8 @@ jQuery(document).ready(function($) {
 
 	var getStock = function() {
 
+		$("h2#errorHandling").empty();
+
 		var stockSymbol = document.getElementById("stockSym").value;
 		console.log(stockSymbol);
 
@@ -34,6 +36,7 @@ jQuery(document).ready(function($) {
 				var stockHigh = stockData[0][2];
 				var stockLow = stockData[0][3];
 				var stockClose = stockData[0][4];
+				console.log("Stock Name: " + stockName);
 				console.log("Stock Close Date: " + stockCloseDate);
 				console.log("Stock Open Value: " + stockOpen);
 				console.log("Stock High Value: " + stockHigh);
