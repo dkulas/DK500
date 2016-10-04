@@ -81,7 +81,7 @@ jQuery(document).ready(function($) {
 					data: {
 						labels: datesArray.reverse(),
 						datasets: [{
-							label: '$' + stockSymbol,
+							label: '$' + stockSymbol.toUpperCase(),
 							data: pricesArray.reverse(),
 							backgroundColor: "#0077CC",
 						}]
