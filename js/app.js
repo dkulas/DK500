@@ -39,26 +39,7 @@ jQuery(document).ready(function($) {
 				console.log("Stock Low Value: " + stockLow);
 				console.log("Stock Close Value: " + stockClose);
 				console.log("Stock IPO Date: " + stockIPODate);
-
-				// initialize the graph/chart
-				// var context = document.getElementById("stockGraph").getContext("2d");
-				/* var stockChart = new Chart(context, {
-						type: 'line',
-						data: {
-							labels: [],
-							datasets: [{
-								label: '',
-								data: [],
-								backgroundColor: "",
-							}, {
-								label: '',
-								data: [],
-								backgroundColor: ""
-							}]
-						}
-				});
-				*/
-
+				
 				// For-Loop to gather and sum all Stock Close values
 				var stockCloseTotal = 0;
 				var stockCloseAverage = 0;
@@ -90,8 +71,25 @@ jQuery(document).ready(function($) {
 
 				}
 
-				console.log("Dates Array: " + datesArray);
-				console.log("Prices Array: " + pricesArray);
+				// console.log("Dates Array: " + datesArray);
+				// console.log("Prices Array: " + pricesArray);
+
+				// initialize the graph/chart
+				var context = document.getElementById("stockGraph").getContext("2d");
+				var stockChart = new Chart(context, {
+					type: 'line',
+					data: {
+						labels: datesArray.reverse(),
+						datasets: [{
+							label: '$' + stockSymbol,
+							data: pricesArray.reverse(),
+							backgroundColor: "#0077CC",
+						}]
+					},
+					options: {
+						responsive: true,
+					}
+				});
 
 			},
 
