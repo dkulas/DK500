@@ -105,12 +105,19 @@ jQuery(document).ready(function($) {
 		if (event.keyCode == 13 || event.which == 13) {
 			$("input#submitBtn").focus();
 			event.preventDefault();
+			resetCanvas();
 			getStock();
 		}
 	});
 
 	$("input#submitBtn").click(function() {
+		resetCanvas();
 		getStock();
 	});
+
+	var resetCanvas = function() {
+		$("#stockGraph").remove();
+		$("#graphSection").append("<canvas id='stockGraph'></canvas>");
+	};
 
 });
