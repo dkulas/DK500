@@ -27,6 +27,7 @@ jQuery(document).ready(function($) {
 
 				var stockData = parsed_json["dataset"]["data"];
 				var stockCode = parsed_json["dataset"]["dataset_code"];
+				var stockName = parsed_json["dataset"]["name"];
 				var stockIPODate = parsed_json["dataset"]["start_date"];
 				var stockCloseDate = stockData[0][0];
 				var stockOpen = stockData[0][1];
