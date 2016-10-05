@@ -65,8 +65,8 @@ jQuery(document).ready(function($) {
 					push those values into their
 					respective arrays (detailed below)
 				*/
-				var datesArray = [];
-				var pricesArray = [];
+				var datesArray = new Array();
+				var pricesArray = new Array();
 
 				for (var i in stockData) {
 
@@ -75,18 +75,23 @@ jQuery(document).ready(function($) {
 
 				}
 
-				// console.log("Dates Array: " + datesArray);
-				// console.log("Prices Array: " + pricesArray);
+				var datesArray2 = $.grep(datesArray, function(n, i) {
+					return i % 20 == 0;
+				});
+
+				var pricesArray2 = $.grep(pricesArray, function(n, i) {
+					return i % 20 == 0;
+				});
 
 				// initialize the graph/chart
 				var context = document.getElementById("stockGraph").getContext("2d");
 				var stockChart = new Chart(context, {
 					type: 'line',
 					data: {
-						labels: datesArray.reverse(),
+						labels: datesArray2.reverse(),
 						datasets: [{
 							label: '$' + stockSymbol.toUpperCase(),
-							data: pricesArray.reverse(),
+							data: pricesArray2.reverse(),
 							backgroundColor: "#0077CC",
 						}]
 					},
