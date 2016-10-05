@@ -36,13 +36,6 @@ jQuery(document).ready(function($) {
 				var stockHigh = stockData[0][2];
 				var stockLow = stockData[0][3];
 				var stockClose = stockData[0][4];
-				console.log("Stock Name: " + stockName);
-				console.log("Stock Close Date: " + stockCloseDate);
-				console.log("Stock Open Value: " + stockOpen);
-				console.log("Stock High Value: " + stockHigh);
-				console.log("Stock Low Value: " + stockLow);
-				console.log("Stock Close Value: " + stockClose);
-				console.log("Stock IPO Date: " + stockIPODate);
 				
 				// For-Loop to gather and sum all Stock Close values
 				var stockCloseTotal = 0;
@@ -93,6 +86,7 @@ jQuery(document).ready(function($) {
 							label: '$' + stockSymbol.toUpperCase(),
 							data: pricesArray2.reverse(),
 							backgroundColor: "#0077CC",
+							lineTension: 0.5,
 						}]
 					},
 					options: {
