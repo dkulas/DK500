@@ -60,39 +60,54 @@ jQuery(document).ready(function($) {
 				*/
 				var datesArray = new Array();
 				var pricesArray = new Array();
+				var sDataPoints = new Array();
 
 				for (var i in stockData) {
 
-					datesArray.push(stockData[i][0]);
-					pricesArray.push(stockData[i][4]);
+					// datesArray.push(stockData[i][0]);
+					// pricesArray.push(stockData[i][4]);
+					sDataPoints.push({label: stockData[i][0], y: stockData[i][4]});
 
 				}
 
 				var datesArray2 = $.grep(datesArray, function(n, i) {
-					return i % 20 == 0;
+					return i % 30 == 0;
 				});
 
 				var pricesArray2 = $.grep(pricesArray, function(n, i) {
-					return i % 20 == 0;
+					return i % 30 == 0;
 				});
 
 				// initialize the graph/chart
-				var context = document.getElementById("stockGraph").getContext("2d");
-				var stockChart = new Chart(context, {
-					type: 'line',
-					data: {
-						labels: datesArray2.reverse(),
-						datasets: [{
-							label: '$' + stockSymbol.toUpperCase(),
-							data: pricesArray2.reverse(),
-							backgroundColor: "#0077CC",
-							lineTension: 0.5,
-						}]
-					},
-					options: {
-						responsive: true,
-					}
-				});
+				// var context = document.getElementById("stockGraph").getContext("2d");
+				// var stockChart = new Chart(context, {
+				// 	type: 'line',
+				// 	data: {
+				// 		labels: datesArray.reverse(),
+				// 		datasets: [{
+				// 			label: '$' + stockSymbol.toUpperCase(),
+				// 			data: pricesArray.reverse(),
+				// 			backgroundColor: "#0077CC",
+				// 			lineTension: 0.5,
+				// 		}]
+				// 	},
+				// 	options: {
+				// 		responsive: true,
+				// 	}
+				// });
+
+			  var sChart = new CanvasJS.Chart("chartContainer", {
+			  	zoomEnabled: true,
+			  	title: {
+			  		text: stockName
+			  	},
+			  	data: [{
+			  		type: "line",
+			  		dataPoints: sDataPoints.reverse()
+			  	}]
+			  });
+
+			  sChart.render();
 
 			},
 
