@@ -75,6 +75,9 @@ jQuery(document).ready(function($) {
 			  	title: {
 			  		text: stockName
 			  	},
+			  	axisX: {
+			  		labelAngle: 45
+			  	},
 			  	data: [{
 			  		type: "line",
 			  		dataPoints: sDataPoints.reverse()
