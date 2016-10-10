@@ -75,7 +75,7 @@ jQuery(document).ready(function($) {
 			  	zoomType: "xy",
 			  	title: {
 			  		text: stockName,
-			  		fontSize: 18,
+			  		fontSize: 20,
 			  	},
 			  	axisX: {
 			  		labelAngle: 0,
