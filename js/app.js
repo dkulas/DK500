@@ -72,6 +72,7 @@ jQuery(document).ready(function($) {
 
 			  var sChart = new CanvasJS.Chart("chartContainer", {
 			  	zoomEnabled: true,
+			  	zoomType: "xy",
 			  	title: {
 			  		text: stockName
 			  	},
@@ -79,10 +80,10 @@ jQuery(document).ready(function($) {
 			  		labelAngle: 0,
 			  		labelFontSize: 14,
 			  		labelMaxWidth: 40,
-			  		includeZero: false
+			  		includeZero: false,
 			  	},
 			  	axisY: {
-			  		labelFontSize: 14
+			  		labelFontSize: 14,
 			  	},
 			  	data: [{
 			  		type: "line",
