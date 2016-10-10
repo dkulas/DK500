@@ -78,7 +78,11 @@ jQuery(document).ready(function($) {
 			  	axisX: {
 			  		labelAngle: 0,
 			  		labelFontSize: 14,
-			  		labelMaxWidth: 40
+			  		labelMaxWidth: 40,
+			  		includeZero: false
+			  	},
+			  	axisY: {
+			  		labelFontSize: 14
 			  	},
 			  	data: [{
 			  		type: "line",
