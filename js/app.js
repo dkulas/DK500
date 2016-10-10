@@ -76,7 +76,9 @@ jQuery(document).ready(function($) {
 			  		text: stockName
 			  	},
 			  	axisX: {
-			  		labelAngle: 45
+			  		labelAngle: 0,
+			  		labelFontSize: 14,
+			  		labelMaxWidth: 40
 			  	},
 			  	data: [{
 			  		type: "line",
