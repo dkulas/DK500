@@ -82,21 +82,10 @@ main {
   margin: 2.5% 5%;
 }
 
-form#getStock {
-  text-align: center;
-}
-
-input#stockSym , input#submitBtn {
+input#stockSym, input#submitBtn {
   font-size: 2em;
   outline: none;
   text-align: center;
-}
-
-input#stockSym {
-  border-top: none;
-  border-right: none;
-  border-bottom: 1px solid black;
-  border-left: none;
 }
 
 input#submitBtn {
@@ -105,14 +94,19 @@ input#submitBtn {
   cursor: pointer;
 }
 
-h2#errorHandling {
+input#submitBtn:hover {
+  color: #006C23;
+}
+
+h2#responseMessage {
   display: none;
-  width: 300px;
-  text-align: center;
+  width: 350px;
   margin: 10px auto;
   padding: 10px 15px;
+  background-color: #ff8080;
   border: 2px solid red;
-  background-color: #ffaaaa;
+  border-radius: 10px;
+  color: #fff;
   font-family: sans-serif;
 }
 
@@ -121,29 +115,15 @@ section#formSection {
 }
 
 form#getStock {
-
-}
-
-input#stockSym, input#submitBtn {
-  outline: none;
-  font-size: 2em;
+  width: 100%;
+  padding: 10px;
+  display: inline-block;
   text-align: center;
 }
 
 input#stockSym {
   border: 1px solid #FFF;
   border-bottom: 1px solid black;
-}
-
-input#submitBtn {
-  border: none;
-  cursor: pointer;
-  background-color: #fff;
-  color: #A9A9A9;
-}
-
-input#submitBtn:hover {
-  color: #006C23;
 }
 
 .hoverColorTransition {

@@ -2,7 +2,8 @@ jQuery(document).ready(function($) {
 
 	var getStock = function() {
 
-		$("h2#errorHandling").empty();
+		$("h2#responseMessage").empty();
+		$("h2#responseMessage").css("display", "none");
 
 		var stockSymbol = document.getElementById("stockSym").value;
 		console.log(stockSymbol);
@@ -14,8 +15,8 @@ jQuery(document).ready(function($) {
 
 			error: function(jqXHR, textStatus, errorThrown) {
 
-				$("h2#errorHandling").append("Error: " + jqXHR.responseJSON.quandl_error.message);
-				$("h2#errorHandling").css({
+				$("h2#responseMessage").append("Error: " + jqXHR.responseJSON.quandl_error.message);
+				$("h2#responseMessage").fadeIn().css({
 					"display": "block"
 				});
 
