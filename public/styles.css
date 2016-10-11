@@ -105,6 +105,17 @@ input#submitBtn {
   cursor: pointer;
 }
 
+h2#errorHandling {
+  display: none;
+  width: 300px;
+  text-align: center;
+  margin: 10px auto;
+  padding: 10px 15px;
+  border: 2px solid red;
+  background-color: #ffaaaa;
+  font-family: sans-serif;
+}
+
 section#formSection {
   text-align: center;
 }

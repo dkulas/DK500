@@ -14,7 +14,10 @@ jQuery(document).ready(function($) {
 
 			error: function(jqXHR, textStatus, errorThrown) {
 
-				alert("Error: " + jqXHR.responseJSON.quandl_error.message);
+				$("h2#errorHandling").append("Error: " + jqXHR.responseJSON.quandl_error.message);
+				$("h2#errorHandling").css({
+					"display": "block"
+				});
 
 			},
 
