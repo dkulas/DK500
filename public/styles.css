@@ -121,7 +121,7 @@ input#stockSym {
 div#chartContainer {
   width: 100%;
   height: 500px;
-  margin: 5% auto;
+  margin: 0 auto;
   text-align: center;
   font-family: sans-serif;
 }
