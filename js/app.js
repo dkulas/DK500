@@ -27,8 +27,8 @@ jQuery(document).ready(function($) {
 
 				var stockData = parsed_json["dataset"]["data"];
 				var stockCode = parsed_json["dataset"]["dataset_code"];
-				var stockName = parsed_json["dataset"]["name"];
 				var stockIPODate = parsed_json["dataset"]["start_date"];
+				var oldestAvailableDate = parsed_json["dataset"]["oldest_available_date"];
 				var stockCloseDate = stockData[0][0];
 				var stockOpen = stockData[0][1];
 				var stockHigh = stockData[0][2];
@@ -46,7 +46,7 @@ jQuery(document).ready(function($) {
 
 				}
 
-				console.log("Stock Close Average: " + stockCloseAverage);
+				console.log("Historical Average Stock-Close Price: " + stockCloseAverage);
 
 				/*
 					For...in loop that will iterate over
