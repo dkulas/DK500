@@ -18,11 +18,12 @@ jQuery(document).ready(function($) {
 				$("p#errorHandling").append("Error: " + jqXHR.responseJSON.quandl_error.message);
 				$("p#errorHandling").fadeIn().css({
 					"display": "block",
-					"width": "70%",
+					"width": "60%",
 					"height": "auto",
 					"margin": "0 auto",
 					"padding": 10,
 					"font-weight": "bold",
+					"text-align": "center",
 					"letter-spacing": 2,
 					"background-color": "red",
 					"color": "white",
@@ -96,8 +97,6 @@ jQuery(document).ready(function($) {
 			  });
 
 			  sChart.render();
-
-			  $("#graphSection").css("display", "block");
 
 			},
 
