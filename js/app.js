@@ -16,7 +16,15 @@ jQuery(document).ready(function($) {
 
 				$("div#chartContainer").append("Error: " + jqXHR.responseJSON.quandl_error.message);
 				$("div#chartContainer").fadeIn().css({
-					"display": "block"
+					"display": "block",
+					"width": "70%",
+					"height": "auto",
+					"margin": "0 auto",
+					"padding": 10,
+					"font-weight": "bold",
+					"letter-spacing": 2,
+					"background-color": "red",
+					"color": "white",
 				});
 
 			},
@@ -88,7 +96,7 @@ jQuery(document).ready(function($) {
 
 			  sChart.render();
 
-			  $("#stockName").append(stockCode);
+			  $("#graphSection").css("display", "block");
 
 			},
 

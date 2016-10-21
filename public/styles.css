@@ -119,7 +119,7 @@ input#stockSym {
 }
 
 div#chartContainer {
-  width: 100%;
+  width: 75%;
   height: 500px;
   margin: 0 auto;
   text-align: center;
