@@ -88,6 +88,8 @@ jQuery(document).ready(function($) {
 
 			  sChart.render();
 
+			  $("#stockName").append(stockCode);
+
 			},
 
 			complete: function() {
