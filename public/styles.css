@@ -122,6 +122,19 @@ h1#stockName {
   font-size: 2em;
 }
 
+p#errorHandling {
+  display: none;
+  width: 60%;
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 2px;
+  background-color: red;
+  color: white;
+}
+
 div#chartContainer {
   width: 75%;
   height: 500px;
