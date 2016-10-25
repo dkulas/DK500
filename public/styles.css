@@ -119,7 +119,12 @@ input#stockSym {
 }
 
 h1#stockName {
-  font-size: 2em;
+  display: none;
+  text-align: center;
+  font-size: 1.5em;
+  color: white;
+  background-color: black;
+  padding: 5px;
 }
 
 p#errorHandling {
