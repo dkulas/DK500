@@ -111,7 +111,9 @@ form#getStock {
 
 input#stockSym {
   border: 1px solid #FFF;
+  border-right: none;
   border-bottom: 2px solid black;
+  box-shadow: 0 4px 2px -2px grey;
 }
 
 .hoverColorTransition {
@@ -125,6 +127,7 @@ h1#stockName {
   color: white;
   background-color: black;
   padding: 10px;
+  box-shadow: 2px 2px 1px grey;
 }
 
 p#errorHandling {
