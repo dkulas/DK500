@@ -114,6 +114,7 @@ input#stockSym {
   border-right: none;
   border-bottom: 2px solid black;
   box-shadow: 0 4px 2px -2px grey;
+  text-transform: uppercase;
 }
 
 .hoverColorTransition {
