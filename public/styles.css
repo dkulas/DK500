@@ -118,6 +118,10 @@ input#stockSym {
   transition: color 0.4s ease;
 }
 
+h1#stockName {
+  font-size: 2em;
+}
+
 div#chartContainer {
   width: 75%;
   height: 500px;

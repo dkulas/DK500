@@ -2,7 +2,7 @@ jQuery(document).ready(function($) {
 
 	var getStock = function() {
 
-		$("div#chartContainer, p#errorHandling").empty();
+		$("div#chartContainer, p#errorHandling, h1#stockName").empty();
 		$("p#errorHandling").css("display", "none");
 
 		var stockSymbol = document.getElementById("stockSym").value;
@@ -97,13 +97,12 @@ jQuery(document).ready(function($) {
 			  });
 
 			  sChart.render();
+			  $("#stockName").append(stockCode);
 
 			},
 
 			complete: function() {
-
 				console.log("Completed");
-				
 			}
 		});
 	}
