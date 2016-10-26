@@ -51,21 +51,14 @@ jQuery(document).ready(function($) {
 				console.log("Historical Average Stock-Close Price: " + stockCloseAverage);
 
 				/*
-					For...in loop that will iterate over
-					the entire set of data and extract
-					the stock close date along with its 
-					associated stock close price and then
-					push those values into their
-					respective arrays (detailed below)
+					Iterate through stockData and extract the stock close date
+					along with its associated stock close price and then
+					push those values into sDataPoints array
 				*/
-				// var datesArray = new Array();
-				// var pricesArray = new Array();
 				var sDataPoints = new Array();
 
 				for (var i in stockData) {
 
-					// datesArray.push(stockData[i][0]);
-					// pricesArray.push(stockData[i][4]);
 					sDataPoints.push({label: stockData[i][0], y: stockData[i][4]});
 
 				}
