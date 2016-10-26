@@ -130,6 +130,7 @@ h1#stockName {
   background-color: black;
   padding: 10px;
   box-shadow: 2px 2px 1px grey;
+  cursor: pointer;
 }
 
 p#errorHandling {
