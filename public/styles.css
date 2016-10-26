@@ -56,6 +56,9 @@ table {
 html {
   height: 100%;
   box-sizing: border-box;
+  background-image: url("./dk500bgimg.png");
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 *, *:before, *:after {
@@ -68,6 +71,10 @@ body {
 
 a.canvasjs-chart-credit {
   display: none !important;
+}
+
+strong {
+  font-weight: bold;
 }
 
 div#noscript {
@@ -121,7 +128,7 @@ input#stockSym {
   transition: color 0.4s ease;
 }
 
-h1#stockName {
+h1#stockAbbreviation {
   display: none;
   text-align: center;
   font-size: 1.5em;
@@ -144,6 +151,31 @@ p#errorHandling {
   letter-spacing: 2px;
   background-color: red;
   color: white;
+}
+
+div#stockInfo {
+  width: 75%;
+  margin: 0 auto 10px auto;
+  padding: 10px;
+  font-family: sans-serif;
+  height: 0px;
+  color: white;
+  background-color: black;
+  box-shadow: 2px 2px 1px grey;
+  opacity: 0;
+}
+
+h1.stock-info {
+  margin-bottom: 10px;
+}
+
+h1#stockAbbreviation:hover + div#stockInfo, h1#stockAbbreviation:active + div#stockInfo {
+  height: auto;
+  opacity: 1;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 div#chartContainer {

@@ -2,8 +2,8 @@ jQuery(document).ready(function($) {
 
 	var getStock = function() {
 
-		$("div#chartContainer, p#errorHandling, h1#stockName").empty();
-		$("p#errorHandling, h1#stockName").css("display", "none");
+		$("div#chartContainer, p#errorHandling, h1#stockAbbreviation").empty();
+		$("p#errorHandling, h1#stockAbbreviation").css("display", "none");
 
 		var stockSymbol = document.getElementById("stockSym").value;
 		console.log(stockSymbol);
@@ -82,7 +82,11 @@ jQuery(document).ready(function($) {
 			  });
 
 			  sChart.render();
-			  $("#stockName").css("display", "inline-block").append(stockCode);
+			  
+			  $("#stockAbbreviation").css("display", "inline-block").append(stockCode);
+			  $("#stockName").append("<strong>Name: </strong>" + stockName);
+			  $("#ipoDate").append("<strong>IPO Date: </strong>" + stockIPODate);
+			  $("#volume").append("<strong>Trading Volume: </strong>" + stockVolume);
 
 			},
 
