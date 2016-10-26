@@ -155,10 +155,10 @@ h1#stockAbbreviation {
   text-align: center;
   font-size: 1.5em;
   font-family: sans-serif;
-  color: white;
-  background-color: black;
+  color: black;
+  background-color: white;
   padding: 10px;
-  box-shadow: 2px 2px 1px grey;
+  box-shadow: 5px 5px 1px black;
   cursor: pointer;
 }
 

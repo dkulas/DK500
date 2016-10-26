@@ -66,17 +66,27 @@ jQuery(document).ready(function($) {
 			  var sChart = new CanvasJS.Chart("chartContainer", {
 			  	zoomEnabled: true,
 			  	zoomType: "xy",
+			  	backgroundColor: "rgba(255, 255, 255, .5)",
 			  	axisX: {
 			  		labelAngle: 0,
 			  		labelFontSize: 14,
+			  		labelFontColor: "white",
+			  		labelFontWeight: "bold",
 			  		labelMaxWidth: 40,
 			  		includeZero: false,
+			  		gridColor: "white",
+			  		lineColor: "white",
 			  	},
 			  	axisY: {
 			  		labelFontSize: 14,
+			  		labelFontColor: "white",
+			  		labelFontWeight: "bold",
+			  		gridColor: "white",
+			  		lineColor: "white",
 			  	},
 			  	data: [{
 			  		type: "line",
+			  		lineColor: "black",
 			  		dataPoints: sDataPoints.reverse()
 			  	}]
 			  });
