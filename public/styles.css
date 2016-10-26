@@ -56,9 +56,14 @@ table {
 html {
   height: 100%;
   box-sizing: border-box;
-  background-image: url("./dk500bgimg.png");
+  /*background-image: url("./dk500bgimg.png");
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center center;*/
+  background: url(./wallstreetwolf.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 *, *:before, *:after {
@@ -99,6 +104,7 @@ input#submitBtn {
   background: none;
   border: none;
   cursor: pointer;
+  color: white;
 }
 
 input#submitBtn:hover {
@@ -119,9 +125,25 @@ form#getStock {
 input#stockSym {
   border: 1px solid #FFF;
   border-right: none;
-  border-bottom: 2px solid black;
-  box-shadow: 0 4px 2px -2px grey;
+  border-top: none;
+  border-left: none;
+  border-bottom: 2px solid white;
   text-transform: uppercase;
+  color: white;
+  background-color: transparent;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: white;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: white;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: white;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: white;
 }
 
 .hoverColorTransition {
@@ -155,7 +177,7 @@ p#errorHandling {
 
 div#stockInfo {
   width: 75%;
-  margin: 0 auto 10px auto;
+  /*margin: 0 auto 10px auto;*/
   padding: 10px;
   font-family: sans-serif;
   height: 0px;
@@ -163,6 +185,8 @@ div#stockInfo {
   background-color: black;
   box-shadow: 2px 2px 1px grey;
   opacity: 0;
+  position: absolute;
+  z-index: 999;
 }
 
 h1.stock-info {
@@ -197,6 +221,7 @@ footer {
 
 footer p {
   padding: 0 0 5px 0;
+  color: white;
 }
 
 footer p strong {
@@ -204,7 +229,7 @@ footer p strong {
 }
 
 footer p strong a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
