@@ -45,6 +45,7 @@ jQuery(document).ready(function($) {
 
 					stockCloseTotal += stockData[i][4];
 					stockCloseAverage = stockCloseTotal / stockData.length; 
+					stockCloseAverage = (Math.floor(100 * stockCloseAverage) / 100).toFixed(2);
 
 				}
 
@@ -95,9 +96,10 @@ jQuery(document).ready(function($) {
 
 			  $("#stockAbbreviation").css("display", "inline-block").append(stockCode);
 			  $("#stockName").append("<strong>Name: </strong>" + stockName);
+			  $("#stockOpen").append("<strong>Previous-Day Opening Price: </strong>" + "$" + stockOpen);
+			  $("#stockClose").append("<strong>Previous-Day Closing Price: </strong>" + "$" + stockClose);
 			  $("#ipoDate").append("<strong>IPO Date: </strong>" + stockIPODate);
 			  $("#volume").append("<strong>Trading Volume: </strong>" + stockVolume);
-			  $("#stockOpen").append("<strong>Previous-Day Opening Price: </strong>" + stockOpen);
 			  $("#historicalAverage").append("<strong>Historical Close-Average: </strong>" + "$" + stockCloseAverage + " / per share");
 
 			},
