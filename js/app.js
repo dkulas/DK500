@@ -8,6 +8,8 @@ jQuery(document).ready(function($) {
 		var stockSymbol = document.getElementById("stockSym").value;
 		console.log(stockSymbol);
 
+		$("img#ajaxLoader").css("display", "block");
+
 		$.ajax({
 
 			url: "https://www.quandl.com/api/v3/datasets/WIKI/" + stockSymbol + ".json?api_key=6QRi2WE7PV6yrG1j56pP",
@@ -23,6 +25,8 @@ jQuery(document).ready(function($) {
 			},
 
 			success: function(parsed_json) {
+
+				$("img#ajaxLoader").css("display", "none");
 
 				console.log(parsed_json);
 
