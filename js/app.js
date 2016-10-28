@@ -84,6 +84,7 @@ jQuery(document).ready(function($) {
 			  	},
 			  	axisY: {
 			  		labelFontSize: 14,
+			  		includeZero: false,
 			  		labelFontColor: "white",
 			  		labelFontWeight: "bold",
 			  		gridColor: "white",
