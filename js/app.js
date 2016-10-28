@@ -8,7 +8,7 @@ jQuery(document).ready(function($) {
 		var stockSymbol = document.getElementById("stockSym").value;
 		console.log(stockSymbol);
 
-		$("img#ajaxLoader").css("display", "block");
+		$("div.cssload-container").css("display", "block");
 
 		$.ajax({
 
@@ -26,7 +26,7 @@ jQuery(document).ready(function($) {
 
 			success: function(parsed_json) {
 
-				$("img#ajaxLoader").css("display", "none");
+				$("div.cssload-container").css("display", "none");
 
 				console.log(parsed_json);
 
