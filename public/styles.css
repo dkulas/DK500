@@ -69,6 +69,10 @@ html {
 
 body {
   font-family: sans-serif;
+  height: 100%;
+  margin: 0 5%;
+  display: flex;
+  flex-direction: column;
 }
 
 a.canvasjs-chart-credit {
@@ -90,10 +94,6 @@ div#noscript {
   background-color: maroon;
   padding: 5px;
   text-align: center;
-}
-
-main {
-  margin: 2.5% 5%;
 }
 
 input#stockSym, input#submitBtn {
@@ -170,6 +170,28 @@ h1#stockAbbreviation {
   cursor: pointer;
 }
 
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale(1.0);
+    opacity: 0.75;
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+    opacity: 1.0;
+  }
+  to { 
+    -webkit-transform: scale(1.0);
+    opacity: 0.75;
+  }
+}
+
+h1.pulse { 
+  opacity: 0.75; 
+  -webkit-animation-name: pulse; 
+  -webkit-animation-duration: 0.5s; 
+  -webkit-animation-iteration-count: 3; 
+}
+
 p#errorHandling {
   display: none;
   width: 60%;
@@ -183,8 +205,9 @@ p#errorHandling {
   color: white;
 }
 
-div#stockInfo {
+section#stockInfo {
   padding: 10px;
+  width: 50%;
   font-family: sans-serif;
   height: 0px;
   color: white;
@@ -200,7 +223,7 @@ h1.stock-info {
   margin-bottom: 10px;
 }
 
-h1#stockAbbreviation:hover + div#stockInfo, h1#stockAbbreviation:active + div#stockInfo {
+h1#stockAbbreviation:hover + section#stockInfo, h1#stockAbbreviation:active + section#stockInfo {
   height: auto;
   opacity: 1;
   -webkit-transition: all 0.5s ease-in-out;

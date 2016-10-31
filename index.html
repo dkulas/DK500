@@ -21,32 +21,30 @@
 	</div>
 </noscript>
 
-<main>
-	<section id="formSection">
-		<form id="getStock" class="centerText" method="get">
-			<input required type="text" name="stocksymbol" id="stockSym" placeholder="ex: AAPL" class="" autofocus="true" autocomplete="off">
-			<input type="button" form="getStock" value="&#8250;" id="submitBtn" class="hoverColorTransition">
-		</form>
+<section id="formSection">
+	<form id="getStock" class="centerText" method="get">
+		<input required type="text" name="stocksymbol" id="stockSym" placeholder="ex: AAPL" class="" autofocus="true" autocomplete="off">
+		<input type="button" form="getStock" value="&#8250;" id="submitBtn" class="hoverColorTransition">
+	</form>
+</section>
+<div class="cssload-container">
+	<div class="cssload-speeding-wheel"></div>
+</div>
+<section id="graphSection">
+	<p id="errorHandling"></p>
+	<h1 id="stockAbbreviation" class="pulse"></h1>
+	<section id="stockInfo">
+		<p>
+			<h1 id="stockName" class="stock-info"></h1>
+			<h1 id="stockOpen" class="stock-info"></h1>
+			<h1 id="stockClose" class="stock-info"></h1>
+			<h1 id="ipoDate" class="stock-info"></h1>
+			<h1 id="volume" class="stock-info"></h1>
+			<h1 id="historicalAverage" class="stock-info"></h1>
+		</p>
 	</section>
-	<div class="cssload-container">
-		<div class="cssload-speeding-wheel"></div>
-	</div>
-	<section id="graphSection">
-		<p id="errorHandling"></p>
-		<h1 id="stockAbbreviation"></h1>
-		<div id="stockInfo">
-			<p>
-				<h1 id="stockName" class="stock-info"></h1>
-				<h1 id="stockOpen" class="stock-info"></h1>
-				<h1 id="stockClose" class="stock-info"></h1>
-				<h1 id="ipoDate" class="stock-info"></h1>
-				<h1 id="volume" class="stock-info"></h1>
-				<h1 id="historicalAverage" class="stock-info"></h1>
-			</p>
-		</div>
-		<div id="chartContainer"></div>
-	</section>
-</main>
+	<div id="chartContainer"></div>
+</section>
 
 <footer>
 	<p>created by <strong><a href="http://dannykulas.com/" target="_blank" class="hoverColorTransition">Danny Kulas</a></strong> | Powered by <strong><a href="https://www.quandl.com" target="_blank" class="hoverColorTransition">Quandl</a></strong> and <strong><a href="http://canvasjs.com/" target="_blank" class="hoverColorTransition">canvasJS</a></strong></p>

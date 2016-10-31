@@ -129,9 +129,15 @@ jQuery(document).ready(function($) {
 		getStock();
 	});
 
+	$("h1#stockAbbreviation").click(function() {
+		$("section#stockInfo").css({
+			"opacity": 1,
+		});
+	});
+
 	var resetCanvas = function() {
 		$("#stockGraph").remove();
-		$("#graphSection").append("<canvas id='stockGraph'></canvas>");
+		// $("#graphSection").append("<canvas id='stockGraph'></canvas>");
 	};
 
 });
