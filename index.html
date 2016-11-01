@@ -11,42 +11,45 @@
 </head>
 <body>
 
-<!-- [if IE]>
-	alert("Shame on you for using IE!  If you want the best experience then please use either Chrome or FireFox.  Thank you.");
-<![endif]-->
+<div class="page-wrap">
 
-<noscript>
-	<div id="noscript" class="centerText">
-		<strong>DK 500</strong> requires JavaSript in order to work
-	</div>
-</noscript>
+	<!-- [if IE]>
+		alert("Shame on you for using IE!  If you want the best experience then please use either Chrome or FireFox.  Thank you.");
+	<![endif]-->
 
-<section id="formSection">
-	<form id="getStock" class="centerText" method="get">
-		<input required type="text" name="stocksymbol" id="stockSym" placeholder="ex: AAPL" class="" autofocus="true" autocomplete="off">
-		<input type="button" form="getStock" value="&#8250;" id="submitBtn" class="hoverColorTransition">
-	</form>
-</section>
-<div class="cssload-container">
-	<div class="cssload-speeding-wheel"></div>
-</div>
-<section id="graphSection">
-	<p id="errorHandling"></p>
-	<h1 id="stockAbbreviation" class="pulse"></h1>
-	<section id="stockInfo">
-		<p>
-			<h1 id="stockName" class="stock-info"></h1>
-			<h1 id="stockOpen" class="stock-info"></h1>
-			<h1 id="stockClose" class="stock-info"></h1>
-			<h1 id="ipoDate" class="stock-info"></h1>
-			<h1 id="volume" class="stock-info"></h1>
-			<h1 id="historicalAverage" class="stock-info"></h1>
-		</p>
+	<noscript>
+		<div id="noscript" class="centerText">
+			<strong>DK 500</strong> requires JavaSript in order to work
+		</div>
+	</noscript>
+
+	<section id="formSection">
+		<form id="getStock" class="centerText" method="get">
+			<input required type="text" name="stocksymbol" id="stockSym" placeholder="ex: AAPL" class="" autofocus="true" autocomplete="off">
+			<input type="button" form="getStock" value="&#8250;" id="submitBtn" class="hoverColorTransition">
+		</form>
 	</section>
-	<div id="chartContainer"></div>
-</section>
+	<div class="cssload-container">
+		<div class="cssload-speeding-wheel"></div>
+	</div>
+	<section id="graphSection">
+		<p id="errorHandling"></p>
+		<h1 id="stockAbbreviation" class="pulse"></h1>
+		<section id="stockInfo">
+			<p>
+				<h1 id="stockName" class="stock-info"></h1>
+				<h1 id="stockOpen" class="stock-info"></h1>
+				<h1 id="stockClose" class="stock-info"></h1>
+				<h1 id="ipoDate" class="stock-info"></h1>
+				<h1 id="volume" class="stock-info"></h1>
+				<h1 id="historicalAverage" class="stock-info"></h1>
+			</p>
+		</section>
+		<div id="chartContainer"></div>
+	</section>
+</div>
 
-<footer>
+<footer class="site-footer">
 	<p>created by <strong><a href="http://dannykulas.com/" target="_blank" class="hoverColorTransition">Danny Kulas</a></strong> | Powered by <strong><a href="https://www.quandl.com" target="_blank" class="hoverColorTransition">Quandl</a></strong> and <strong><a href="http://canvasjs.com/" target="_blank" class="hoverColorTransition">canvasJS</a></strong></p>
 </footer>
 <script type="text/javascript" src="js/app.js" async></script>
