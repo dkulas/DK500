@@ -113,6 +113,27 @@ jQuery(document).ready(function($) {
 				console.log("Completed");
 			}
 		});
+
+		// Below AJAX call lists all available databases to interact with.  Time to expand scope of project
+
+		$.ajax({
+
+			url: "https://www.quandl.com/api/v3/databases.json",
+			dataType: "json",
+
+			error: function(jqXHR, textStatus, errorThrown) {
+				alert(jqXHR.responseJSON.quandl_error.message);
+			},
+
+			success: function(parsed_json) {
+				console.log(parsed_json);
+			},
+
+			complete: function() {
+				console.log("Completed");
+			}
+		});
+
 	}
 
 	$("input#stockSym").keypress(function(event) {
