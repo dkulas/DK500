@@ -2,7 +2,7 @@ jQuery(document).ready(function($) {
 
 	var getStock = function() {
 
-		$("div#chartContainer, p#errorHandling, h1#stockAbbreviation, #stockName, #ipoDate, #volume, #stockOpen, #historicalAverage").empty();
+		$("div#chartContainer, p#errorHandling, h1#stockAbbreviation, #stockName, #ipoDate, #volume, #stockOpen, #stockClose, #historicalAverage").empty();
 		$("p#errorHandling, h1#stockAbbreviation").css("display", "none");
 
 		var stockSymbol = document.getElementById("stockSym").value;
@@ -17,6 +17,7 @@ jQuery(document).ready(function($) {
 
 			error: function(jqXHR, textStatus, errorThrown) {
 
+				$("div.cssload-container").css("display", "none");
 				$("p#errorHandling").append("Error: " + jqXHR.responseJSON.quandl_error.message);
 				$("p#errorHandling").fadeIn().css({
 					"display": "block"
