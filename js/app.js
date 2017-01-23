@@ -76,7 +76,7 @@ jQuery(document).ready(function($) {
 			  	axisX: {
 			  		labelAngle: 0,
 			  		labelFontSize: 14,
-			  		labelFontColor: "white",
+			  		labelFontColor: "black",
 			  		labelFontWeight: "bold",
 			  		labelMaxWidth: 40,
 			  		includeZero: false,
@@ -86,7 +86,7 @@ jQuery(document).ready(function($) {
 			  	axisY: {
 			  		labelFontSize: 14,
 			  		includeZero: false,
-			  		labelFontColor: "white",
+			  		labelFontColor: "black",
 			  		labelFontWeight: "bold",
 			  		gridColor: "white",
 			  		lineColor: "white",
