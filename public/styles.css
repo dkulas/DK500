@@ -127,7 +127,6 @@ input#stockSym {
   background-color: transparent;
   font-weight: bold;
   box-sizing: border-box;
-  width: 100%;
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -278,8 +277,12 @@ div#chartContainer {
       display: none;
     }
 
+    input#stockSym {
+      width: 100%;
+    }
+
     p.footerText {
-      bottom: 180px;
+      top: 67px;
       color: rgba(215,215,215,0.5);
     }
 
@@ -315,8 +318,12 @@ div#chartContainer {
       display: none;
     }
 
+    input#stockSym {
+      width: 100%;
+    }
+
     p.footerText {
-      bottom: 180px;
+      top: 67px;
       color: rgba(215,215,215,0.5);
     }
 
@@ -352,8 +359,12 @@ div#chartContainer {
       display: none;
     }
 
+    input#stockSym {
+      width: 100%;
+    }
+
     p.footerText {
-      bottom: 180px;
+      top: 67px;
       color: rgba(215,215,215,0.5);
     }
 
@@ -390,8 +401,12 @@ div#chartContainer {
       display: none;
     }
 
+    input#stockSym {
+      width: 100%;
+    }
+
     p.footerText {
-      bottom: 180px;
+      top: 67px;
       color: rgba(215,215,215,0.5);
     }
 
