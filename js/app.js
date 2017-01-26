@@ -63,7 +63,7 @@ jQuery(document).ready(function($) {
 				};
 
 				$.each(sDataPoints, function(i) {
-					var templateString = '<table><thead><tr><td><p>Closing Date: '+sDataPoints[i].label + '<br>' + 'Closing Price: ' + sDataPoints[i].y+'<br><br></p></td></tr></thead></table>';
+					var templateString = '<table><thead><tr><td><p><strong>Closing Date:</strong> '+sDataPoints[i].label + '<br>' + '<strong>Closing Price:</strong> ' + sDataPoints[i].y+'<br><br></p></td></tr></thead></table>';
 					$("#test").append(templateString);
 				});
 
