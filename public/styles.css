@@ -170,6 +170,7 @@ section#stockInfo {
   z-index: 999;
   display: block;
   color: black;
+  margin: 10px 0 0 0;
 }
 
 section#stockInfo section {
@@ -180,6 +181,13 @@ section#stockInfo section {
 
 h1.stock-info {
   margin-bottom: 10px;
+}
+
+div.hLine {
+  border-bottom: 2px solid black;
+  margin: 0 10px;
+  box-sizing: border-box;
+  display: none;
 }
 
 div#test {
@@ -286,8 +294,12 @@ div#chartContainer {
       width: 100%;
     }
 
+    div.hLine {
+      display: block;
+    }
+
     p.footerText {
-      top: 67px;
+      top: 75px;
       color: rgba(215,215,215,0.5);
     }
 
@@ -328,8 +340,12 @@ div#chartContainer {
       width: 100%;
     }
 
+    div.hLine {
+      display: block;
+    }
+
     p.footerText {
-      top: 67px;
+      top: 75px;
       color: rgba(215,215,215,0.5);
     }
 
@@ -370,8 +386,12 @@ div#chartContainer {
       width: 100%;
     }
 
+    div.hLine {
+      display: block;
+    }
+
     p.footerText {
-      top: 67px;
+      top: 75px;
       color: rgba(215,215,215,0.5);
     }
 
@@ -413,8 +433,12 @@ div#chartContainer {
       width: 100%;
     }
 
+    div.hLine {
+      display: block;
+    }
+
     p.footerText {
-      top: 67px;
+      top: 75px;
       color: rgba(215,215,215,0.5);
     }
 
