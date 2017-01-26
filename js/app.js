@@ -2,11 +2,10 @@ jQuery(document).ready(function($) {
 
 	var getStock = function() {
 
-		$("div#chartContainer, p#errorHandling, h1#stockAbbreviation, #stockName, #ipoDate, #volume, #stockOpen, #stockClose, #historicalAverage").empty();
-		$("p#errorHandling, h1#stockAbbreviation").css("display", "none");
+		$("div#chartContainer, p#errorHandling, #stockName, #ipoDate, #volume, #stockOpen, #stockClose, #historicalAverage, div#test").empty();
+		$("p#errorHandling").css("display", "none");
 
 		var stockSymbol = document.getElementById("stockSym").value;
-		console.log(stockSymbol);
 
 		$("div.cssload-container").css("display", "block");
 
@@ -47,14 +46,10 @@ jQuery(document).ready(function($) {
 				var stockCloseAverage = 0;
 
 				for (var i = 0; i < stockData.length; i++) {
-
 					stockCloseTotal += stockData[i][4];
 					stockCloseAverage = stockCloseTotal / stockData.length; 
 					stockCloseAverage = (Math.floor(100 * stockCloseAverage) / 100).toFixed(2);
-
 				}
-
-				console.log("Historical Average Stock-Close Price: " + stockCloseAverage);
 
 				/*
 					Iterate through stockData and extract the stock close date
@@ -64,10 +59,18 @@ jQuery(document).ready(function($) {
 				var sDataPoints = new Array();
 
 				for (var i in stockData) {
-
 					sDataPoints.push({label: stockData[i][0], y: stockData[i][4]});
+				};
 
-				}
+				$.each(sDataPoints, function(i) {
+					var templateString = '<table><thead><tr><td><p>Closing Date: '+sDataPoints[i].label + '<br>' + 'Closing Price: ' + sDataPoints[i].y+'<br><br></p></td></tr></thead></table>';
+					$("#test").append(templateString);
+				});
+
+				// sDataPoints.forEach(function(element) {
+				// 	console.log(element.label);
+				// 	console.log(element.y);
+				// });
 
 			  var sChart = new CanvasJS.Chart("chartContainer", {
 			  	zoomEnabled: true,
@@ -99,6 +102,8 @@ jQuery(document).ready(function($) {
 			  });
 
 			  sChart.render();
+
+			  console.log(sDataPoints);
 
 			  $("#stockAbbreviation").css("display", "inline-block").append(stockCode);
 			  $("#stockName").append("<strong>Name: </strong>" + stockName);
