@@ -67,11 +67,6 @@ jQuery(document).ready(function($) {
 					$("#test").append(templateString);
 				});
 
-				// sDataPoints.forEach(function(element) {
-				// 	console.log(element.label);
-				// 	console.log(element.y);
-				// });
-
 			  var sChart = new CanvasJS.Chart("chartContainer", {
 			  	zoomEnabled: true,
 			  	zoomType: "xy",
