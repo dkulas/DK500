@@ -339,8 +339,7 @@ div#chartContainer {
   }
 
   p.footerText {
-    bottom: 0;
-    font-size: 12px;
+    display: none;
   }
 }
 
@@ -411,8 +410,7 @@ div#chartContainer {
   }
 
   p.footerText {
-    bottom: 0;
-    font-size: 12px;
+    display: none;
   }
 }
 
@@ -484,8 +482,7 @@ div#chartContainer {
   }
 
   p.footerText {
-    bottom: 0;
-    font-size: 12px;
+    display: none;
   }
 }
 
@@ -557,7 +554,6 @@ div#chartContainer {
   }
 
   p.footerText {
-    bottom: 0;
-    font-size: 12px;
+    display: none;
   }
 }
