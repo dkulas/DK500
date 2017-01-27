@@ -337,6 +337,11 @@ div#chartContainer {
     h1.stock-info {
       margin: 0 10px 0 0;
   }
+
+  p.footerText {
+    bottom: 0;
+    font-size: 12px;
+  }
 }
 
 /* ----------- iPhone 5 and 5S ----------- */
@@ -403,6 +408,11 @@ div#chartContainer {
 
     h1.stock-info {
       margin: 0 10px 0 0;
+  }
+
+  p.footerText {
+    bottom: 0;
+    font-size: 12px;
   }
 }
 
@@ -472,6 +482,11 @@ div#chartContainer {
     h1.stock-info {
       margin: 0 10px 0 0;
   }
+
+  p.footerText {
+    bottom: 0;
+    font-size: 12px;
+  }
 }
 
 /* ----------- iPhone 6+ ----------- */
@@ -539,5 +554,10 @@ div#chartContainer {
 
     h1.stock-info {
       margin: 0 10px 0 0;
+  }
+
+  p.footerText {
+    bottom: 0;
+    font-size: 12px;
   }
 }
