@@ -314,7 +314,23 @@ div#chartContainer {
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) {
+    section#graphSection {
+      display: block;
+    }
 
+    div#chartContainer {
+      width: 95%;
+      height: 250px;
+    }
+
+    section#stockInfo section {
+      font-size: 12px;
+      display: flex;
+  }
+
+    h1.stock-info {
+      margin: 0 10px 0 0;
+  }
 }
 
 /* ----------- iPhone 5 and 5S ----------- */
@@ -360,7 +376,23 @@ div#chartContainer {
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) {
+    section#graphSection {
+      display: block;
+    }
 
+    div#chartContainer {
+      width: 95%;
+      height: 250px;
+    }
+
+    section#stockInfo section {
+      font-size: 12px;
+      display: flex;
+  }
+
+    h1.stock-info {
+      margin: 0 10px 0 0;
+  }
 }
 
 /* ----------- iPhone 6 ----------- */
@@ -407,7 +439,23 @@ div#chartContainer {
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) { 
+    section#graphSection {
+      display: block;
+    }
 
+    div#chartContainer {
+      width: 95%;
+      height: 250px;
+    }
+
+    section#stockInfo section {
+      font-size: 12px;
+      display: flex;
+  }
+
+    h1.stock-info {
+      margin: 0 10px 0 0;
+  }
 }
 
 /* ----------- iPhone 6+ ----------- */
@@ -454,5 +502,21 @@ div#chartContainer {
   and (max-device-width: 736px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: landscape) { 
+    section#graphSection {
+      display: block;
+    }
 
+    div#chartContainer {
+      width: 95%;
+      height: 250px;
+    }
+
+    section#stockInfo section {
+      font-size: 12px;
+      display: flex;
+  }
+
+    h1.stock-info {
+      margin: 0 10px 0 0;
+  }
 }
