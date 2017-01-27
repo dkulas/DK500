@@ -295,6 +295,10 @@ div#chartContainer {
       width: 100%;
     }
 
+    h1.stock-info {
+      margin: 10px 0 0 0;
+    }
+
     div.hLine {
       display: block;
     }
@@ -330,7 +334,7 @@ div#chartContainer {
   }
 
     h1.stock-info {
-      margin: 5px 10px 0 0;
+      margin: 0 10px 0 0;
   }
 }
 
@@ -355,6 +359,10 @@ div#chartContainer {
 
     input#stockSym {
       width: 100%;
+    }
+
+    h1.stock-info {
+      margin: 10px 0 0 0;
     }
 
     div.hLine {
@@ -392,7 +400,7 @@ div#chartContainer {
   }
 
     h1.stock-info {
-      margin: 5px 10px 0 0;
+      margin: 0 10px 0 0;
   }
 }
 
@@ -419,6 +427,10 @@ div#chartContainer {
       width: 100%;
     }
 
+    h1.stock-info {
+      margin: 10px 0 0 0;
+    }
+
     div.hLine {
       display: block;
     }
@@ -455,7 +467,7 @@ div#chartContainer {
   }
 
     h1.stock-info {
-      margin: 5px 10px 0 0;
+      margin: 0 10px 0 0;
   }
 }
 
@@ -480,6 +492,10 @@ div#chartContainer {
 
     input#stockSym {
       width: 100%;
+    }
+
+    h1.stock-info {
+      margin: 10px 0 0 0;
     }
 
     div.hLine {
@@ -518,6 +534,6 @@ div#chartContainer {
   }
 
     h1.stock-info {
-      margin: 5px 10px 0 0;
+      margin: 0 10px 0 0;
   }
 }
