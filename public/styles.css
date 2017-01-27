@@ -321,6 +321,7 @@ div#chartContainer {
   and (orientation: landscape) {
     section#graphSection {
       display: block;
+      margin: -20px 0 0 0;
     }
 
     div#chartContainer {
@@ -387,6 +388,7 @@ div#chartContainer {
   and (orientation: landscape) {
     section#graphSection {
       display: block;
+      margin: -20px 0 0 0;
     }
 
     div#chartContainer {
@@ -454,6 +456,7 @@ div#chartContainer {
   and (orientation: landscape) { 
     section#graphSection {
       display: block;
+      margin: -20px 0 0 0;
     }
 
     div#chartContainer {
@@ -521,6 +524,7 @@ div#chartContainer {
   and (orientation: landscape) { 
     section#graphSection {
       display: block;
+      margin: -20px 0 0 0;
     }
 
     div#chartContainer {
