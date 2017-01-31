@@ -304,12 +304,7 @@ div#chartContainer {
     }
 
     p.footerText {
-      top: 75px;
-      color: rgba(215,215,215,0.5);
-    }
-
-    p.footerText strong a {
-      color: rgba(215,215,215,0.5);
+      display: none;
     }
 }
 
@@ -375,12 +370,7 @@ div#chartContainer {
     }
 
     p.footerText {
-      top: 75px;
-      color: rgba(215,215,215,0.5);
-    }
-
-    p.footerText strong a {
-      color: rgba(215,215,215,0.5);
+      display: none;
     }
 }
 
@@ -446,12 +436,7 @@ div#chartContainer {
     }
 
     p.footerText {
-      top: 75px;
-      color: rgba(215,215,215,0.5);
-    }
-
-    p.footerText strong a {
-      color: rgba(215,215,215,0.5);
+      display: none;
     }
 
 }
@@ -518,12 +503,7 @@ div#chartContainer {
     }
 
     p.footerText {
-      top: 75px;
-      color: rgba(215,215,215,0.5);
-    }
-
-    p.footerText strong a {
-      color: rgba(215,215,215,0.5);
+      display: none;
     }
 
 }
