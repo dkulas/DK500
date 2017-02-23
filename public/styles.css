@@ -203,31 +203,6 @@ div#chartContainer {
   font-family: sans-serif;
 }
 
- p.footerText {
-  font-family: sans-serif;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  text-align: center;
-  padding: 0 0 5px 0;
-  color: black;
-}
-
- p.footerText strong {
-  font-weight: 700;
-}
-
- p.footerText strong a {
-  color: black;
-  text-decoration: none;
-}
-
- p.footerText strong a:hover {
-  cursor: pointer;
-  color: #006C23;
-}
-
 /*AJAX Loader*/
 
 .cssload-container {
@@ -302,10 +277,6 @@ div#chartContainer {
     div.hLine {
       display: block;
     }
-
-    p.footerText {
-      display: none;
-    }
 }
 
 /* Landscape */
@@ -331,10 +302,6 @@ div#chartContainer {
 
     h1.stock-info {
       margin: 0 10px 0 0;
-  }
-
-  p.footerText {
-    display: none;
   }
 }
 
@@ -368,10 +335,6 @@ div#chartContainer {
     div.hLine {
       display: block;
     }
-
-    p.footerText {
-      display: none;
-    }
 }
 
 /* Landscape */
@@ -397,10 +360,6 @@ div#chartContainer {
 
     h1.stock-info {
       margin: 0 10px 0 0;
-  }
-
-  p.footerText {
-    display: none;
   }
 }
 
@@ -434,11 +393,6 @@ div#chartContainer {
     div.hLine {
       display: block;
     }
-
-    p.footerText {
-      display: none;
-    }
-
 }
 
 /* Landscape */
@@ -464,10 +418,6 @@ div#chartContainer {
 
     h1.stock-info {
       margin: 0 10px 0 0;
-  }
-
-  p.footerText {
-    display: none;
   }
 }
 
@@ -501,11 +451,6 @@ div#chartContainer {
     div.hLine {
       display: block;
     }
-
-    p.footerText {
-      display: none;
-    }
-
 }
 
 /* Landscape */
@@ -531,9 +476,5 @@ div#chartContainer {
 
     h1.stock-info {
       margin: 0 10px 0 0;
-  }
-
-  p.footerText {
-    display: none;
   }
 }
