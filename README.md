@@ -14,6 +14,8 @@ Right-click somewhere, anywhere, on the document until you see an option that sa
 
 Click 'open in browser' and enjoy
 
+(link comming soon)
+
 ******
 *Tech*
 ******
@@ -28,4 +30,6 @@ jQuery
 AJAX
 
 Quandl API
+
+CanvasJS
 

@@ -54,7 +54,6 @@ table {
 /**/
 
 html {
-  height: 100%;
   box-sizing: border-box;
 }
 
@@ -63,21 +62,24 @@ html {
 }
 
 body {
+  font-family: sans-serif;
   height: 100%;
-  font-family: "PT Serif", serif;
+  /*width: 100%;*/
+  display: flex;
+  flex-direction: column;
 }
 
-h1#mainHeading {
-  font-size: 4em;
+a.canvasjs-chart-credit {
+  display: none !important;
+}
+
+strong {
   font-weight: bold;
-  padding: 10px;
-  background: -webkit-linear-gradient(top, #F1F1F1 0%, #fff 100%);
-  background: -linear-gradient(top, #F1F1F1 0%, #fff 100%);
-  background: -moz-linear-gradient(top, #F1F1F1 0%, #fff 100%);
-  color: #006C23;
-  letter-spacing: 2px;
-  text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
-  cursor: default;
+}
+
+img#ajaxLoader {
+  display: none;
+  margin: 0 auto;
 }
 
 div#noscript {
@@ -88,12 +90,23 @@ div#noscript {
   text-align: center;
 }
 
-main {
-  margin: 2.5% 5%;
+input#stockSym, input#submitBtn {
+  font-size: 2em;
+  outline: none;
+  text-align: center;
 }
 
-h2#errorHandling {
+input#submitBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
   display: none;
+}
+
+input#submitBtn:hover {
+  color: #006C23;
 }
 
 section#formSection {
@@ -101,59 +114,367 @@ section#formSection {
 }
 
 form#getStock {
-
-}
-
-input#stockSym, input#submitBtn {
-  outline: none;
-  font-size: 2em;
+  width: 100%;
+  padding: 10px;
+  display: inline-block;
   text-align: center;
 }
 
 input#stockSym {
-  border: 1px solid #FFF;
-  border-bottom: 1px solid black;
+  border: none;
+  border-bottom: 2px solid black;
+  text-transform: uppercase;
+  color: black;
+  background-color: transparent;
+  font-weight: bold;
+  box-sizing: border-box;
 }
 
-input#submitBtn {
-  border-radius: 0 10px 10px 0;
-  border: 1px solid black;
-  cursor: pointer;
-  background-color: #fff;
-  color: #A9A9A9;
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: black;
+  font-weight: bold;
 }
-
-input#submitBtn:hover {
-  color: #006C23;
+::-moz-placeholder { /* Firefox 19+ */
+  color: black;
+  font-weight: bold;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: black;
+  font-weight: bold;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: black;
+  font-weight: bold;
 }
 
 .hoverColorTransition {
   transition: color 0.4s ease;
 }
 
-footer {
-  font-family: sans-serif;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 100%;
+p#errorHandling {
+  display: none;
+  width: 60%;
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
+  font-weight: bold;
   text-align: center;
+  letter-spacing: 2px;
+  background-color: red;
+  color: white;
 }
 
-footer p {
-  padding: 0 0 5px 0;
-}
-
-footer p strong {
-  font-weight: 700;
-}
-
-footer p strong a {
+section#stockInfo {
+  padding: 10px;
+  width: 100%;
+  font-family: sans-serif;
+  z-index: 999;
+  display: block;
   color: black;
-  text-decoration: none;
+  margin: 10px 0 0 0;
 }
 
-footer p strong a:hover {
-  cursor: pointer;
-  color: #006C23;
+section#stockInfo section {
+  width: 75%;
+  margin: 0 auto;
+}
+
+
+h1.stock-info {
+  margin-bottom: 10px;
+}
+
+div.hLine {
+  border-bottom: 2px solid black;
+  margin: 0 10px;
+  box-sizing: border-box;
+  display: none;
+}
+
+div#test {
+  display: none;
+}
+
+div#chartContainer {
+  width: 75%;
+  height: 500px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+/*AJAX Loader*/
+
+.cssload-container {
+  width: 100%;
+  height: 49px;
+  text-align: center;
+  display: none;
+}
+
+.cssload-speeding-wheel {
+  width: 49px;
+  height: 49px;
+  margin: 0 auto;
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 50%;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  animation: cssload-spin 575ms infinite linear;
+    -o-animation: cssload-spin 575ms infinite linear;
+    -ms-animation: cssload-spin 575ms infinite linear;
+    -webkit-animation: cssload-spin 575ms infinite linear;
+    -moz-animation: cssload-spin 575ms infinite linear;
+}
+
+@keyframes cssload-spin {
+  100%{ transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-o-keyframes cssload-spin {
+  100%{ -o-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-ms-keyframes cssload-spin {
+  100%{ -ms-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-webkit-keyframes cssload-spin {
+  100%{ -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-moz-keyframes cssload-spin {
+  100%{ -moz-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    div#test {
+      display: block;
+      position: absolute;
+      top: 400px;
+      right: 25%;
+    }
+
+    section#graphSection {
+      display: none;
+    }
+
+    input#stockSym {
+      width: 100%;
+    }
+
+    h1.stock-info {
+      margin: 10px 0 0 0;
+    }
+
+    div.hLine {
+      display: block;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    section#graphSection {
+      display: block;
+      margin: -20px 0 0 0;
+    }
+
+    div#chartContainer {
+      width: 95%;
+      height: 250px;
+    }
+
+    section#stockInfo section {
+      font-size: 12px;
+      display: flex;
+  }
+
+    h1.stock-info {
+      margin: 0 10px 0 0;
+  }
+}
+
+/* ----------- iPhone 5 and 5S ----------- */
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    div#test {
+      display: block;
+      position: absolute;
+      top: 400px;
+      right: 25%;
+    }
+
+    section#graphSection {
+      display: none;
+    }
+
+    input#stockSym {
+      width: 100%;
+    }
+
+    h1.stock-info {
+      margin: 10px 0 0 0;
+    }
+
+    div.hLine {
+      display: block;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    section#graphSection {
+      display: block;
+      margin: -20px 0 0 0;
+    }
+
+    div#chartContainer {
+      width: 95%;
+      height: 250px;
+    }
+
+    section#stockInfo section {
+      font-size: 12px;
+      display: flex;
+  }
+
+    h1.stock-info {
+      margin: 0 10px 0 0;
+  }
+}
+
+/* ----------- iPhone 6 ----------- */
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+    div#test {
+      display: block;
+      position: absolute;
+      top: 400px;
+      right: 25%;
+    }
+
+    section#graphSection {
+      display: none;
+    }
+
+    input#stockSym {
+      width: 100%;
+    }
+
+    h1.stock-info {
+      margin: 10px 0 0 0;
+    }
+
+    div.hLine {
+      display: block;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+    section#graphSection {
+      display: block;
+      margin: -20px 0 0 0;
+    }
+
+    div#chartContainer {
+      width: 95%;
+      height: 250px;
+    }
+
+    section#stockInfo section {
+      font-size: 12px;
+      display: flex;
+  }
+
+    h1.stock-info {
+      margin: 0 10px 0 0;
+  }
+}
+
+/* ----------- iPhone 6+ ----------- */
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    div#test {
+      display: block;
+      position: absolute;
+      top: 400px;
+      right: 25%;
+    }
+
+    section#graphSection {
+      display: none;
+    }
+
+    input#stockSym {
+      width: 100%;
+    }
+
+    h1.stock-info {
+      margin: 10px 0 0 0;
+    }
+
+    div.hLine {
+      display: block;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+    section#graphSection {
+      display: block;
+      margin: -20px 0 0 0;
+    }
+
+    div#chartContainer {
+      width: 95%;
+      height: 250px;
+    }
+
+    section#stockInfo section {
+      font-size: 12px;
+      display: flex;
+  }
+
+    h1.stock-info {
+      margin: 0 10px 0 0;
+  }
 }

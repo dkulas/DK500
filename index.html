@@ -5,44 +5,52 @@
 	<meta charset="UTF-8">
 	<meta name="description" content="This is a simple website that displays stock information using the Quandl API">
 	<meta name="viewport" content="initial-scale=1">
-	<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="public/styles.css">
-	<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="js/Chart.bundle.js"></script>
+	<script type="text/javascript" src="canvasJS/canvasjs.min.js" async></script>
 </head>
 <body>
 
-<!-- [if IE]>
-	alert("Shame on you for using Internet Explorer!  Do you still get your milk home-delivered or pay a nickle for a movie ticket?  Didn't think so.  Try FireFox or Chrome for a better experience.  Thank you!");
-<![endif]-->
+	<!-- [if IE]>
+		alert("Shame on you for using IE!  If you want the best experience then please use either Chrome or FireFox.  Thank you.");
+	<![endif]-->
 
-<noscript>
-	<div id="noscript" class="centerText">
-		<strong>DK 500</strong> requires JavaSript in order to work
-	</div>
-</noscript>
+	<noscript>
+		<div id="noscript" class="centerText">
+			<strong>DK 500</strong> requires JavaSript in order to work
+		</div>
+	</noscript>
 
-<h1 id="mainHeading">DK 500</h1>
-
-<main>
-	<h2></h2>
 	<section id="formSection">
 		<form id="getStock" class="centerText" method="get">
 			<input required type="text" name="stocksymbol" id="stockSym" placeholder="ex: AAPL" class="" autofocus="true" autocomplete="off">
-			<input type="button" form="getStock" value="Go" id="submitBtn" class="hoverColorTransition">
+			<input type="button" form="getStock" value="&#8250;" id="submitBtn" class="hoverColorTransition">
 		</form>
 	</section>
-	<section>
-		<h2 id="errorHandling"></h2>
-		<p id="stockInfo">
-			
-		</p>
-	</section>
-</main>
 
-<footer>
-	<p>created by <strong><a href="http://dannykulas.com/" target="_blank" class="hoverColorTransition">Danny Kulas</a></strong> | Powered by <strong><a href="https://www.quandl.com" target="_blank" class="hoverColorTransition">Quandl</a></strong></p>
-</footer>
-<script type="text/javascript" src="js/app.js"></script>
+	<div class="cssload-container">
+		<div class="cssload-speeding-wheel"></div>
+	</div>
+	<p id="errorHandling"></p>
+	<section id="stockInfo">
+		<section>
+			<h1 id="stockName" class="stock-info"></h1>
+			<h1 id="stockOpen" class="stock-info"></h1>
+			<h1 id="stockClose" class="stock-info"></h1>
+			<h1 id="ipoDate" class="stock-info"></h1>
+			<h1 id="volume" class="stock-info"></h1>
+			<h1 id="historicalAverage" class="stock-info"></h1>
+		</section>
+	</section>
+	
+	<section id="graphSection">
+		<div id="chartContainer"></div>
+	</section>
+
+	<div class="hLine"></div>
+
+	<div id="test"></div>
+
+<script type="text/javascript" src="js/app.js" async></script>
 </body>
 </html>
