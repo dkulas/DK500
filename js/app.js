@@ -55,9 +55,12 @@ jQuery(document).ready(function($) {
 				console.log("Stock Close Average: " + stockCloseAverage);
 
 				// For-In Loop to gather and store Stock Close Date and Stock Close Value to be used in Chart JS
-				// for (var i in stockData) {
-				// 	console.log(stockData[i][0] + ": " + stockData[i][4]);
-				// }
+				for (var i in stockData) {
+					console.log(stockData[i][0] + ": " + stockData[i][4]);
+
+					$("#stockInfo").append(stockData[i][0] + ": " + stockData[i][4] + "<br>");
+
+				}
 
 			},
 
