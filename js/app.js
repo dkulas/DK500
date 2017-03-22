@@ -107,6 +107,7 @@ jQuery(document).ready(function($) {
 			  $("#ipoDate").append("<strong>IPO Date: </strong>" + stockIPODate);
 			  $("#volume").append("<strong>Trading Volume: </strong>" + stockVolume);
 			  $("#historicalAverage").append("<strong>Historical Close-Average: </strong>" + "$" + stockCloseAverage + " / per share");
+
 			},
 
 			complete: function() {
