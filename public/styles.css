@@ -188,7 +188,7 @@ a#viewHistory {
   text-align: center;
   text-decoration: none;
   display: none;
-  margin-top: 20px;
+  margin: 20px;
   font-weight: bold;
   color: green;
 }
@@ -196,6 +196,10 @@ a#viewHistory {
 div#test {
   margin: 10px auto;
   display: none;
+}
+
+div#test table thead tr td p {
+  line-height: 1.5;
 }
 
 div#chartContainer {
@@ -206,29 +210,8 @@ div#chartContainer {
   font-family: sans-serif;
 }
 
- p.footerText {
-  font-family: sans-serif;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  text-align: center;
-  padding: 0 0 5px 0;
-  color: black;
-}
-
- p.footerText strong {
-  font-weight: 700;
-}
-
- p.footerText strong a {
-  color: black;
-  text-decoration: none;
-}
-
- p.footerText strong a:hover {
-  cursor: pointer;
-  color: #006C23;
+i#turnSideways {
+  display: none;
 }
 
 /*AJAX Loader*/
@@ -284,10 +267,11 @@ div#chartContainer {
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
     div#test {
-      display: block;
-      position: absolute;
-      top: 400px;
-      right: 25%;
+      width: 100%;
+    }
+
+    div#test table {
+      margin: 0 auto;
     }
 
     section#graphSection {
@@ -303,8 +287,8 @@ div#chartContainer {
       margin: 10px 0 0 0;
     }
 
-    p.footerText {
-      display: none;
+    i#turnSideways {
+      display: block;
     }
 }
 
@@ -319,6 +303,11 @@ div#chartContainer {
       margin: -20px 0 0 0;
     }
 
+    input#stockSym {
+      width: 100%;
+      border-radius: 0;
+    }
+
     div#chartContainer {
       width: 95%;
       height: 250px;
@@ -327,15 +316,11 @@ div#chartContainer {
     section#stockInfo section {
       font-size: 12px;
       display: flex;
-  }
+    }
 
     h1.stock-info {
       margin: 0 10px 0 0;
-  }
-
-  p.footerText {
-    display: none;
-  }
+    }
 }
 
 /* ----------- iPhone 5 and 5S ----------- */
@@ -347,10 +332,11 @@ div#chartContainer {
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
     div#test {
-      display: block;
-      position: absolute;
-      top: 400px;
-      right: 25%;
+      width: 100%;
+    }
+
+    div#test table {
+      margin: 0 auto;
     }
 
     section#graphSection {
@@ -366,8 +352,8 @@ div#chartContainer {
       margin: 10px 0 0 0;
     }
 
-    p.footerText {
-      display: none;
+    i#turnSideways {
+      display: block;
     }
 }
 
@@ -382,6 +368,11 @@ div#chartContainer {
       margin: -20px 0 0 0;
     }
 
+    input#stockSym {
+      width: 100%;
+      border-radius: 0;
+    }
+
     div#chartContainer {
       width: 95%;
       height: 250px;
@@ -390,15 +381,11 @@ div#chartContainer {
     section#stockInfo section {
       font-size: 12px;
       display: flex;
-  }
+    }
 
     h1.stock-info {
       margin: 0 10px 0 0;
-  }
-
-  p.footerText {
-    display: none;
-  }
+    }
 }
 
 /* ----------- iPhone 6 ----------- */
@@ -410,10 +397,11 @@ div#chartContainer {
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) { 
     div#test {
-      display: block;
-      position: absolute;
-      top: 400px;
-      right: 25%;
+      width: 100%;
+    }
+
+    div#test table {
+      margin: 0 auto;
     }
 
     section#graphSection {
@@ -429,10 +417,9 @@ div#chartContainer {
       margin: 10px 0 0 0;
     }
 
-    p.footerText {
-      display: none;
+    i#turnSideways {
+      display: block;
     }
-
 }
 
 /* Landscape */
@@ -446,6 +433,11 @@ div#chartContainer {
       margin: -20px 0 0 0;
     }
 
+    input#stockSym {
+      width: 100%;
+      border-radius: 0;
+    }
+
     div#chartContainer {
       width: 95%;
       height: 250px;
@@ -454,15 +446,11 @@ div#chartContainer {
     section#stockInfo section {
       font-size: 12px;
       display: flex;
-  }
+    }
 
     h1.stock-info {
       margin: 0 10px 0 0;
-  }
-
-  p.footerText {
-    display: none;
-  }
+    }
 }
 
 /* ----------- iPhone 6+ ----------- */
@@ -474,10 +462,11 @@ div#chartContainer {
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: portrait) { 
     div#test {
-      display: block;
-      position: absolute;
-      top: 400px;
-      right: 25%;
+      width: 100%;
+    }
+
+    div#test table {
+      margin: 0 auto;
     }
 
     section#graphSection {
@@ -493,10 +482,9 @@ div#chartContainer {
       margin: 10px 0 0 0;
     }
 
-    p.footerText {
-      display: none;
+    i#turnSideways {
+      display: block;
     }
-
 }
 
 /* Landscape */
@@ -510,6 +498,11 @@ div#chartContainer {
       margin: -20px 0 0 0;
     }
 
+    input#stockSym {
+      width: 100%;
+      border-radius: 0;
+    }
+
     div#chartContainer {
       width: 95%;
       height: 250px;
@@ -518,13 +511,9 @@ div#chartContainer {
     section#stockInfo section {
       font-size: 12px;
       display: flex;
-  }
+    }
 
     h1.stock-info {
       margin: 0 10px 0 0;
-  }
-
-  p.footerText {
-    display: none;
-  }
+    }
 }
