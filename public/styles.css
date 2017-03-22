@@ -184,13 +184,6 @@ h1.stock-info {
   margin-bottom: 10px;
 }
 
-div.hLine {
-  border-bottom: 2px solid black;
-  margin: 0 10px;
-  box-sizing: border-box;
-  display: none;
-}
-
 a#viewHistory {
   text-align: center;
   text-decoration: none;
@@ -303,14 +296,11 @@ div#chartContainer {
 
     input#stockSym {
       width: 100%;
+      border-radius: 0;
     }
 
     h1.stock-info {
       margin: 10px 0 0 0;
-    }
-
-    div.hLine {
-      display: block;
     }
 
     p.footerText {
@@ -369,14 +359,11 @@ div#chartContainer {
 
     input#stockSym {
       width: 100%;
+      border-radius: 0;
     }
 
     h1.stock-info {
       margin: 10px 0 0 0;
-    }
-
-    div.hLine {
-      display: block;
     }
 
     p.footerText {
@@ -435,14 +422,11 @@ div#chartContainer {
 
     input#stockSym {
       width: 100%;
+      border-radius: 0;
     }
 
     h1.stock-info {
       margin: 10px 0 0 0;
-    }
-
-    div.hLine {
-      display: block;
     }
 
     p.footerText {
@@ -502,14 +486,11 @@ div#chartContainer {
 
     input#stockSym {
       width: 100%;
+      border-radius: 0;
     }
 
     h1.stock-info {
       margin: 10px 0 0 0;
-    }
-
-    div.hLine {
-      display: block;
     }
 
     p.footerText {
