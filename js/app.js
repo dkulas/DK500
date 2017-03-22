@@ -98,7 +98,14 @@ jQuery(document).ready(function($) {
 
 			  sChart.render();
 
-			  console.log(sDataPoints);
+			  $("a#viewHistory").css("display", "block");
+
+			  $("a#viewHistory").on("click", function() {
+			  	$("div#test").toggle();
+			  });
+
+			  // console.log(sDataPoints);
+			  $("#test").append(sDataPoints);
 
 			  $("#stockAbbreviation").css("display", "inline-block").append(stockCode);
 			  $("#stockName").append("<strong>Name: </strong>" + stockName);

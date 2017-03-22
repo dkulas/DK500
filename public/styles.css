@@ -191,7 +191,17 @@ div.hLine {
   display: none;
 }
 
+a#viewHistory {
+  text-align: center;
+  text-decoration: none;
+  display: none;
+  margin-top: 20px;
+  font-weight: bold;
+  color: green;
+}
+
 div#test {
+  margin: 10px auto;
   display: none;
 }
 
