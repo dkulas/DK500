@@ -109,8 +109,7 @@ jQuery(document).ready(function($) {
 
 			  $("#stockAbbreviation").css("display", "inline-block").append(stockCode);
 			  $("#stockName").append("<strong>Name: </strong>" + stockName);
-			  $("#stockOpen").append("<strong>Previous-Day Opening Price: </strong>" + "$" + stockOpen);
-			  $("#stockClose").append("<strong>Previous-Day Closing Price: </strong>" + "$" + stockClose);
+			  $("#stockOpen").append("<strong>Yesterday O/C Price: </strong>" + "$" + stockOpen + "/" + stockClose);
 			  $("#ipoDate").append("<strong>IPO Date: </strong>" + stockIPODate);
 			  $("#volume").append("<strong>Trading Volume: </strong>" + stockVolume);
 			  $("#historicalAverage").append("<strong>Historical Close-Average: </strong>" + "$" + stockCloseAverage + " / per share");
